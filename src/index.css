@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.side, .nav {
+    /* background: linear-gradient(to right bottom, #931b1b, #701111, #541717); */
+    background: rgba(211, 211, 211, 0.268);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #43424200;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(197, 38, 38);
+  }
