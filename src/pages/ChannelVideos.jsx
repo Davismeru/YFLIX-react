@@ -1,8 +1,6 @@
 import { useParams } from "react-router-dom"
 import { fetchFromApi } from "../assets/fetchFromApi"
 import { useEffect, useState } from "react"
-import channelCard from "../components/ChannelCard"
-import { FaTv } from "react-icons/fa6"
 import Videos from "../components/Videos"
 import ChannelCard from "../components/ChannelCard"
 

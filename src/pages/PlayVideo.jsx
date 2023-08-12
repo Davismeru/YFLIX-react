@@ -24,7 +24,7 @@ function PlayVideo() {
 
 //fetch suggested videos
 useEffect(() => {
-  fetchFromApi(`search?relatedToVideoId=${params.id}&part=id%2Csnippet&type=video&maxResults=20`)
+  fetchFromApi(`search?relatedToVideoId=7ghhRHRP6t4&part=id%2Csnippet&type=video&maxResults=50`)
   .then((data) => {
       return data.json()
   }) .then((videoData) => {
@@ -89,7 +89,7 @@ useEffect(() => {
       {/* Related Videos */}
       <section className="p-5 md:w-[100%] md:ml-10">
         <p className="text-3xl font-bold mb-5 text-red-500">Related videos</p>
-        <Videos videos = {related}/>
+        {related && <Videos videos = {related}/>}
       </section>
     </div>
   )

@@ -24,26 +24,25 @@ function CommentSection({ commentId, commentCount }) {
         {
             comments.map(comment => {
                 const commentSnippet = comment.snippet.topLevelComment.snippet
-                console.log(comment);
-               return <section className='bg-slate-100 my-2 p-2'>
+               return <section className='bg-slate-100 my-2 p-2' key={comment.id}>
                         {/* commentor details */}
                         <div className='flex items-center gap-3'>
                             <img src={commentSnippet.authorProfileImageUrl} alt="img"  className='rounded-full'/>
-                            <p className='font-semibold text-gray-700'>{commentSnippet.authorDisplayName}</p>
+                            <p className='font-semibold text-gray-700'>{commentSnippet?.authorDisplayName}</p>
                         </div>
 
                         {/* comment */}
                         <div className='text-sm my-2'>
-                            <p dangerouslySetInnerHTML={{__html:commentSnippet.textDisplay}}></p>
+                            <p dangerouslySetInnerHTML={{__html:commentSnippet?.textDisplay}}></p>
                         </div>
 
                         {/* comment statistics */}
                         <div className='flex items-center text-[12px] gap-5'>
-                            <p>Published on: {commentSnippet.publishedAt.slice(0,10)}</p>
+                            <p>Published on: {commentSnippet?.publishedAt.slice(0,10)}</p>
                             {/* comment likes */}
                             <section className='flex items-center gap-1'>
                                 <FaThumbsUp/>
-                                <p>{commentSnippet.likeCount}</p>
+                                <p>{commentSnippet?.likeCount}</p>
                             </section>
                         </div>
                     </section>
